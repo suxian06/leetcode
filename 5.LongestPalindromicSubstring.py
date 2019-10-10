@@ -17,3 +17,4 @@ class Solution(object):
                         p = s[i:i + j]
                         pL = len(p)
         return p
+#
