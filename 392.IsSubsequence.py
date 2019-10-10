@@ -14,4 +14,4 @@ class Solution(object):
                 pos += t[pos:].find(val) + 1
 
         return True
-        
+#
