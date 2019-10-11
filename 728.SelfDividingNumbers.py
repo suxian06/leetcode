@@ -15,7 +15,7 @@ class Solution(object):
                 if "0" in str(i):
                     pass
 
-                elif all([ i % int(val) == 0 for val in str(i)]):
+                elif all(( i % int(val) == 0 for val in str(i))):
                     res.append(i)
 
         else:
@@ -25,9 +25,8 @@ class Solution(object):
                 if "0" in str(i):
                     pass
 
-                elif all([ i % int(val) == 0 for val in str(i)]):
+                elif all(( i % int(val) == 0 for val in str(i))):
                     res.append(i)
 
         return res
-
-            
+        
