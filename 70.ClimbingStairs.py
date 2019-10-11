@@ -13,8 +13,7 @@ class Solution(object):
         while n > 2:
 
             cur = prevOne + prevTwo
-            prevOne = prevTwo
-            prevTwo = cur
+            prevOne, prevTwo = prevTwo, cur
 
             n -= 1
 
