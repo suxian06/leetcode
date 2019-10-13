@@ -16,8 +16,4 @@ class Solution:
                 res.append(pointStart[i])
 
         res.append(len(S))
-        out = []
-        for i in range(1,len(res)):
-            out.append(res[i] - res[i - 1])
-
-        return out
+        return [res[i] - res[i - 1] for i in range(1,len(res))]
