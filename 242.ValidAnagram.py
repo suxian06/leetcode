@@ -1,3 +1,5 @@
+# Runtime: 20 ms, faster than 99.33% of Python online submissions for Valid Anagram.
+# Memory Usage: 12.5 MB, less than 100.00% of Python online submissions for Valid Anagram.
 class Solution(object):
     def isAnagram(self, s, t):
         """
@@ -16,4 +18,3 @@ class Solution(object):
                 return False
 
         return True
-        
