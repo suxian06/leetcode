@@ -1,6 +1,6 @@
-# Runtime: 40 ms, faster than 38.24% of Python3 online submissions for Spiral Matrix.
-# Memory Usage: 13.7 MB, less than 8.70% of Python3 online submissions for Spiral Matrix.
-# sad
+# Runtime: 36 ms, faster than 74.13% of Python3 online submissions for Spiral Matrix.
+# Memory Usage: 13.8 MB, less than 8.70% of Python3 online submissions for Spiral Matrix.
+# 
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
 
