@@ -37,3 +37,14 @@ class Solution:
         BFS_reset(root,sum_val)
 
         return root
+
+# Below is the real brilliant solution by lee215 : https://leetcode.com/lee215/
+# Runtime: 24 ms, faster than 99.53% of Python3 online submissions for Binary Search Tree to Greater Sum Tree.
+# Memory Usage: 12.8 MB, less than 100.00% of Python3 online submissions for Binary Search Tree to Greater Sum Tree.
+class Solution:
+    val = 0
+    def bstToGst(self, root):
+        if root.right: self.bstToGst(root.right)
+        root.val = self.val = self.val + root.val
+        if root.left: self.bstToGst(root.left)
+        return root
