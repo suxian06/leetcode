@@ -2,8 +2,7 @@
 # Memory Usage: 12.9 MB, less than 100.00% of Python3 online submissions for Subdomain Visit Count.
 class Solution:
     def subdomainVisits(self, cpdomains: List[str]) -> List[str]:
-
-        res = []
+        
         hash_table = {}
         for d in cpdomains:
 
