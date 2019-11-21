@@ -1,31 +1,27 @@
+# Runtime: 92 ms, faster than 99.73% of Python3 online submissions for Asteroid Collision.
+# Memory Usage: 13.9 MB, less than 25.00% of Python3 online submissions for Asteroid Collision.
+# updated using stack
 class Solution:
     def asteroidCollision(self, asteroids: List[int]) -> List[int]:
+        stack = []
+        for v in asteroids:
+            if v > 0:
+                stack.append(v)
 
-        L = len(asteroids)
-        #if L == 0:
-        #    return asteroids
-        i = 1
-
-        while i != L:
-            if i == 0:
-                i += 1
-            prev = asteroids[i - 1] > 0
-            stat = asteroids[i] > 0
-            if prev == True and stat == False:
-                if abs(asteroids[i]) == abs(asteroids[i - 1]):
-                    asteroids.pop(i - 1)
-                    asteroids.pop(i - 1)
-                    i -= 1
-                    L = len(asteroids)
+            elif v < 0 and stack:
+                if stack[-1] < 0:
+                    stack.append(v)
+                elif stack[-1] + v == 0:
+                    stack.pop()
                 else:
-                    asteroids.pop([i - 1, i][abs(asteroids[i - 1]) > abs(asteroids[i])])
-                    i -= 1
-                    L = len(asteroids)
+                    while stack and stack[-1] > 0 and stack[-1] + v < 0:
+                        stack.pop()
+                    if stack and stack[-1] + v == 0:
+                        stack.pop()
+                    elif not stack or stack[-1] < 0:
+                        stack.append(v)
 
-                if len(asteroids) < 2:
-                    return asteroids
+            elif not stack:
+                stack.append(v)
 
-            else:
-                i += 1
-                prev = stat
-        return asteroids
+        return stack
