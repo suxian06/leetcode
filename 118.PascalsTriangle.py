@@ -1,5 +1,5 @@
-# Runtime: 24 ms, faster than 64.72% of Python3 online submissions for Decode Ways.
-# Memory Usage: 12.7 MB, less than 16.00% of Python3 online submissions for Decode Ways.
+# Runtime: 24 ms, faster than 97.98% of Python3 online submissions for Decode Ways.
+# Memory Usage: 12.7 MB, less than 100.00% of Python3 online submissions for Decode Ways.
 
 class Solution:
     def generate(self, numRows: int) -> List[List[int]]:
