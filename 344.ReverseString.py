@@ -1,3 +1,6 @@
+# Runtime: 212 ms, faster than 95.12% of Python3 online submissions for Reverse String.
+# Memory Usage: 17.1 MB, less than 100.00% of Python3 online submissions for Reverse String.
+
 class Solution(object):
     def reverseString(self, s):
         """
