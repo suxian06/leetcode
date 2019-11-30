@@ -1,5 +1,5 @@
-# Runtime: 80 ms, faster than 87.45% of Python3 online submissions for Merge Two Binary Trees.
-# Memory Usage: 13.4 MB, less than 94.29% of Python3 online submissions for Merge Two Binary Trees.
+# Runtime: 76 ms, faster than 95.02% of Python3 online submissions for Merge Two Binary Trees.
+# Memory Usage: 13.3 MB, less than 100.00% of Python3 online submissions for Merge Two Binary Trees.
 
 # Definition for a binary tree node.
 # class TreeNode:
@@ -14,6 +14,8 @@ class Solution:
         #head = TreeNode(0)
         if not t1:
             return t2
+        if not t2:
+            return t1
 
         def traverse(t1,t2):
 
