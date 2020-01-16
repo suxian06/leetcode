@@ -12,14 +12,14 @@ class Solution:
     l1,l2 = [], []
     def getAllElements(self, root1: TreeNode, root2: TreeNode) -> List[int]:
         self.l1, self.l2 = [], []
-        def PreorderTraverse(root,l):
+        def Traverse(root,l):
             if root:
-                PreorderTraverse(root.left,l)
+                Traverse(root.left,l)
                 l.append(root.val)
-                PreorderTraverse(root.right,l)
+                Traverse(root.right,l)
 
-        PreorderTraverse(root1,self.l1)
-        PreorderTraverse(root2,self.l2)
+        Traverse(root1,self.l1)
+        Traverse(root2,self.l2)
 
         def MergeSort(l1,l2):
             L1,L2 = len(l1), len(l2)
